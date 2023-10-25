@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Contact Us</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="style.css">
+		<script src="external.js"></script>
+		<!--connect the fonts-->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;500;700&display=swap" rel="stylesheet">
+		<!--connect the icon-->
+		<script src="https://kit.fontawesome.com/a9f8161db4.js" crossorigin="anonymous"></script>
+		<script>
+			function checkup(){
+			var dataStorage = [];
+			dataStorage[0] = document.getElementById("infornationOfMessage").value;
+			dataStorage[1] = document.getElementById("infornationOfEmail").value;
+			dataStorage[2] = document.getElementById("infornationOfName").value;
+
+			if(dataStorage[0].length <2){
+				document.getElementById("feedback").innerHTML = "";
+			}
+
+			var symbol = dataStorage[1].indexOf('@');
+			if(symbol < 1){
+				document.getElementById("emailFeedback").innerHTML = "Not A Valid Email";
+			}
+
+			if(dataStorage[2].length <2){
+				document.getElementById("feedback").innerHTML = "Not A Valid Name";
+			}
+
+			}
+
+		</script>
+	</head>
+
+	<body>
+	<!--logo & navagation bar-->
+		<section class="header-section5">
+			<nav>
+				<a href="index.html"><img src="img/logo.png" class="logo5" alt="logo-with-transparent"></a>
+				<div class="navagation5" id="navigationIcon">
+				<!--closing "x" & menue icon navagation bar on small devices-->
+					<i class="fa fa-times" onclick="hiddenMenue()"></i>
+					<ul>
+						<li><a href="index.html">HOME</a></li>
+						<li><a href="index2.html">APPLY</a></li>
+						<li><a href="index3.html">GALLERY</a></li>
+						<li><a href="index4.html">GAME</a></li>
+						<li><a href="index5.html">CONTACT US</a></li>
+					</ul>
+				</div>
+				<i class="fa fa-bars" onclick="visibleMenue()"></i>
+			</nav>
+
+		<!--About-Us-Box-->
+			<div class="About-Us-Box5">
+				<h1>Contact Us Section</h1>
+				<p>Check Our Contact Information Below:</p>
+			</div>
+		</section>
+		<section>
+		<br/>
+		    <h1 class="Begin">Contact Our Team</h1>
+            <h2 class="WhatIsThat"></h2>
+            <p class="IntroComGalery">Get the information you might need right Below:</p>
+			<p class="responsiveparagraph"><strong>Telephone Number-</strong>0872579724</p>
+			<p class="responsiveparagraph"><strong>Email-</strong>atristicgallery@gmail.com</p>
+			<p class="responsiveparagraph"><strong>Location-</strong>HQ, Dundrum, Dublin</p>
+
+
+
+			<br>
+			<p class="oo11">-Check Out Our Location-</p>
+			<a href=""><img class="map" src="img/map.png" alt="map of location"></a>
+		</section>
+		<br />
+
+
+			<h1 class="headerofapplysection">Join Artistic Gallery Community<h1>
+			<p class="headerparagraphappysection">In Order To Join, You Are Required To Enter The Information Below.<p>
+			<form class="formofapplysection">
+				<label class="label4">Enter your name:</label>
+				<br/>
+				<input type="text" id="infornationOfName">
+				<p id="feedback"> </p>
+
+				<label class="label4">Enter your email:</label>
+				<br/>
+				<input type="text" id="infornationOfEmail">
+				<p id="emailFeedback"></p>
+
+				<div>
+				<label class="label4">Enter your Reason:</label>
+				<br/>
+				<textarea name="messageBox" id="infornationOfMessage" ></textarea>
+				</div>
+
+				<input type="button" value="submit" onclick="checkup()">
+
+
+			</form>
+			<section>
+						<nav class="nav55">
+							<div class="div55">
+							<!--closing "x" & menue icon navagation bar on small devices-->
+								<ul class="ul5">
+									<li class="li5"><a href="" class="a5">HOME</a></li>
+									<li class="li5"><a href="" class="a5">APPLY</a></li>
+									<li class="li5"><a href="" class="a5">GALLERY</a></li>
+									<li class="li5"><a href="" class="a5">GAME</a></li>
+									<li class="li5"><a href="" class="a5">CONTACT US</a></li>
+								</ul>
+							</div>
+
+						</nav>
+						<p class="p5">Copyright©|Made by Group 13</p>
+					</section>
+		<!--Javascript, allowing icons to hide/show small devices-->
+		<script>
+			var navigationIcon = document.getElementById("navigationIcon")
+			function visibleMenue(){
+				navigationIcon.style.right = "0";
+				}
+			function hiddenMenue(){
+				navigationIcon.style.right = "-205px";
+			}
+		</script>
+
+	</body>
+
+</html>

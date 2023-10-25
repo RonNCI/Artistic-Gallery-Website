@@ -1,0 +1,115 @@
+/* Start of Game CSS */
+.gameBody{
+  background-color:
+  margin:0;
+}
+.header{
+  color:white;
+  padding: 10px;
+}
+.gameh2, .gameParagraph, .gameh1{
+  text-align: center;
+}
+.gameDiv1{
+  padding: 100px auto;
+  margin: 0px auto;
+  text-align: center;
+}
+.div1, .div2, .div3, .div4, .div5, .div6{
+  margin: 10px;
+  padding: 10px;
+  width: 300px;
+  border-radius: 15px;
+  display: inline-block;
+  border: 5px black;
+  border-style: hidden;
+  box-shadow: 2px 5px 2px 5px;
+}
+.gameDiv1 .imageOptimizations{
+  width: 100%;
+}
+.buttonDiv{
+  text-align: center;
+  margin: 10px 0;
+}
+.buttonDiv .gameboxbttn{
+  font-size: 30px;
+}
+/* Remove this if it effects everything */
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+/*                                       */
+.gameboxcustom{
+  max-width: 700px;
+  background-color: #ffffff;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 15px;
+  display:none;
+  border: 1px solid;
+  box-shadow: 5px 5px;
+}
+.gameboxbttn{
+  padding: 10px 30px;
+  background-color: green;
+  color: #ffffff;
+  cursor: pointer;
+  margin-top: 10px;
+  border: 0;
+  border-radius: 10px;
+  font-size: 20px;
+}
+.gameDiv2 .gameName001{
+  font-size: 20px;
+  font-weight: bold;
+  border-bottom: 1px solid;
+  line-height: 30px;
+}
+.gameDiv2 .gameTopic{
+  font-size: 40px;
+  padding: 10px 0;
+  margin-bottom: 5px;
+}
+.gameDiv2{
+  padding: 10px;
+  font-size: 24px;
+  line-height: 30px;
+  margin-bottom: 10px;
+}
+.gameDiv2 .nextbttn .gameboxbttn{
+  margin-top: 13px;
+}
+.gameTopic{
+  margin: 10px 0;
+}
+.gameTopic .resultmsg{
+  text-align: center;
+  font-weight: lighter;
+  background-color: brown;
+  font-size: 40px;
+}
+.txtField{
+  font-size: 50px;
+  text-align: center;
+  border-radius: 10px;
+  border: 1px solid;
+}
+.userGuessResults .gameTable{
+  width: 100%;
+  border-collapse: separate;
+  margin: 30px 0;
+}
+.userGuessResults .gameTable .gameTd{
+  border: 1px solid black;
+  padding:8px 15px;
+  font-weight: 500;
+  color: black;
+}
+.userGuessResults .gameboxbttn{
+  margin-top: 0;
+}
+/*End of Game CSS*/

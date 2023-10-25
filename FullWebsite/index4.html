@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Online Game</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="style.css">
+		<script src="external.js"></script>
+		<!--connect the fonts-->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;500;700&display=swap" rel="stylesheet">
+		<!--connect the icon-->
+		<script src="https://kit.fontawesome.com/a9f8161db4.js" crossorigin="anonymous"></script>
+	</head>
+
+	<body class="gameBody">
+	<!--logo & navagation bar-->
+		<section class="header-section4">
+			<nav>
+				<a href="index.html"><img src="img/logo.png" class="logo4" alt="logo-with-transparent"></a>
+				<div class="navagation4" id="navigationIcon">
+				<!--closing "x" & menue icon navagation bar on small devices-->
+					<i class="fa fa-times" onclick="hiddenMenue()"></i>
+					<ul>
+						<li><a href="index.html">HOME</a></li>
+						<li><a href="index2.html">APPLY</a></li>
+						<li><a href="index3.html">GALLERY</a></li>
+						<li><a href="index4.html">GAME</a></li>
+						<li><a href="index5.html">CONTACT US</a></li>
+					</ul>
+				</div>
+				<i class="fa fa-bars" onclick="visibleMenue()"></i>
+			</nav>
+
+		<!--About-Us-Box-->
+
+			<div class="About-Us-Box4">
+				<h1>Game Section</h1>
+				<p>Check Out Our Latest Game Below:</p>
+			</div>
+		</section>
+		<br />
+			<div class="galleryContainer">
+					<h1 class="Begin">Welcome To The Game</h1>
+					<h2 class="WhatIsThat"></h2>
+					<p class="IntroComGalery">This Is A Fun Area Where You Can Test <br/>How Lucky You Are Below:
+					</p>
+			</div>
+			<div class="gameDiv1" id="hideDiv2">
+			<div class="gamediv101">
+			  <img src="img/gamepic1.png" class="imageOptimizations">
+			  <h2 class="gameh2">Guardian Angel: 1</h2>
+			  <h4 class="gameh4"></h4>
+			</div>
+			<div class="gamediv102">
+			  <img src="img/gamepic2.png" class="imageOptimizations">
+			  <h2 class="gameh2">Naked Beauty: 2</h2>
+			  <h4 class="gameh4"></h4>
+			</div>
+			<div class="gamediv103">
+			  <img src="img/gamepic3.png" class="imageOptimizations">
+			  <h2 class="gameh2">Modern Art: 3</h2>
+			  <h4 class="gameh4"></h4>
+			</div>
+			<div class="gamediv104" >
+			  <img src="img/gamepic4.png" class="imageOptimizations">
+			  <h2 class="gameh2">van Gogh: 4</h2>
+			  <h4 class="gameh4"></h4>
+			</div>
+			<div class="gamediv105">
+			  <img src="img/gamepic5.png" class="imageOptimizations">
+			  <h2 class="gameh2">Soul Eater: 5</h2>
+			  <h4 class="gameh4"></h4>
+			</div>
+			<div class="gamediv106">
+			  <img src="img/gamepic6.png" class="imageOptimizations">
+			  <h2 class="gameh2">Chaos: 6</h2>
+			  <h4 class="gameh4"></h4>
+			</div>
+		  </div>
+		  <!-- second main div (hidden)-->
+		  <div class="gameDiv2 gameboxcustom" id="hideGameContainer">
+			<div class="gameName001">
+			  Guess The Number!
+			</div>
+		  <!-- guessing Game -->
+			<div class="gameTopic">
+			  <h5>Enter a number between 1 and 6</h5>
+			  <h6 id="showmsg" class="hidemsg"></h6>
+			  <input type="text" id="userguess" class="txtField">
+			  <input type="submit" id="submitbttn" onclick="playGuessingGame()" class="gameboxbttn">
+			  <h6 id="showmsg2" class="hidemsg2"></h6>
+			</div>
+		  </div>
+		  <!-- results for guessing game-->
+		  <div class="userGuessResults gameboxcustom " id="hideGameResultContainer">
+			<h1 class="gameh1">Your Result</h1>
+			<table class="gameTable">
+			  <tr class="gameTr">
+				<!-- result for right guess -->
+				<td class="gameTd">Correct guess</td>
+				<td class="gameTd"><span id="rightGuesses" class="gameSpan"></span></td>
+			  </tr>
+			  <tr class="gameTr">
+				<!-- result for wrong guess -->
+				<td class="gameTd">Wrong guess</td>
+				<td class="gameTd"><span id="wrongGuesses"></span></td>
+			  </tr>
+			  <tr class="gameTr">
+				<!-- result for correct number-->
+				<td class="gameTd">Correct Number</td>
+				<td class="gameTd"><span id="rightNumber"></span></td>
+			  </tr>
+			  <tr class="gameTr">
+				<!-- result for picture name -->
+				<td class="gameTd">Picture Name</td>
+				<td class="gameTd"><span id="pictureNumber"></span></td>
+			  </tr class="gameTr">
+			</table>
+		  </div>
+		  <!-- hide event button -->
+		  <div class="buttonDiv">
+			<button type="button" onclick="hideDiv() " class="gameboxbttn">Click to Play!</button>
+		  </div>
+
+
+
+		<!--Javascript, allowing icons to hide/show small devices-->
+		<script>
+			var navigationIcon = document.getElementById("navigationIcon")
+			function visibleMenue(){
+				navigationIcon.style.right = "0";
+				}
+			function hiddenMenue(){
+				navigationIcon.style.right = "-205px";
+			}
+		</script>
+
+	</body>
+
+</html>

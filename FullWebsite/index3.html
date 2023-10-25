@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Online Gallery</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="style.css">
+		<script src="external.js"></script>
+		<!--connect the fonts-->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;500;700&display=swap" rel="stylesheet">
+		<!--connect the icon-->
+		<script src="https://kit.fontawesome.com/a9f8161db4.js" crossorigin="anonymous"></script>
+	</head>
+
+	<body>
+	<!--logo & navagation bar-->
+		<section class="header-section3">
+			<nav>
+				<a href="index.html"><img src="img/logo.png" class="logo3" alt="logo-with-transparent"></a>
+				<div class="navagation3" id="navigationIcon">
+				<!--closing "x" & menue icon navagation bar on small devices-->
+					<i class="fa fa-times" onclick="hiddenMenue()"></i>
+					<ul>
+						<li><a href="index.html">HOME</a></li>
+						<li><a href="index2.html">APPLY</a></li>
+						<li><a href="index3.html">GALLERY</a></li>
+						<li><a href="index4.html">GAME</a></li>
+						<li><a href="index5.html">CONTACT US</a></li>
+					</ul>
+				</div>
+				<i class="fa fa-bars" onclick="visibleMenue()"></i>
+			</nav>
+
+		<!--About-Us-Box-->
+			<div class="About-Us-Box3">
+				<h1>Gallery Section</h1>
+				<p>Check Out the Top 10 Gallery This Month Below:</p>
+			</div>
+		</section>
+		<section>
+		<script>
+                var fname;
+                function description1(fname){
+                document.getElementById("myDescription1").innerHTML = "Don Riko - Flower Eye";
+                }
+                var cname
+                function description2(cname){
+                document.getElementById("myDescription2").innerHTML = "Mucho Pusto - Different";
+                }
+                var dname;
+                function description3(dname){
+                document.getElementById("myDescription3").innerHTML = "Li Cahoot - Colors";
+                }
+                var ename
+                function description4(ename){
+                document.getElementById("myDescription4").innerHTML = "John Milkman - Simplicity";
+                }
+                var gname;
+                function description5(gname){
+                document.getElementById("myDescription5").innerHTML = "Alisa Asila - Uncle";
+                }
+                var hname
+                function description6(hname){
+                document.getElementById("myDescription6").innerHTML = "Daniel Joker - End of Land";
+                }
+                var vname
+                function description7(vname){
+                document.getElementById("myDescription7").innerHTML = "Karen Ronaldo - Discussing Project";
+                }
+                var aname
+                function description8(aname){
+                document.getElementById("myDescription8").innerHTML = "Engi Barumba - Secret Window";
+                }
+                var tname
+                function description9(tname){
+                document.getElementById("myDescription9").innerHTML = "Jackie McGregor - Deadlines";
+                }
+                var qname
+                function description10(qname){
+                document.getElementById("myDescription10").innerHTML = "George Chappy - Wolfish Look";
+                }
+            </script>
+			<div class="galleryContainer">
+                <h1 class="Begin">Community Art Gallery</h1>
+                <h2 class="WhatIsThat"></h2>
+                <p class="IntroComGalery">Each community has it's own memories, life, memories and history and therefore their own small or big depends from which<br> perspective do you choose but as was said each community carries their own ideas,<br> way of seeing life and again  - The Perspective.
+                </p>
+			</div>
+          <div class="divContainer">
+          <div class="div1">
+            <input type="image" class="Riko" src="img/flowereyeok.jpg" onclick="description1(fname)">
+            <h3 id="myDescription1"></h3>
+            </p>
+          </div>
+          <div class="div2">
+            <input type="image" class="Mucho" src="img/905649_1_m.png" onclick="description2(cname)">
+            <h3 id="myDescription2"></h3>
+          </div>
+          <div class="div3">
+            <input type="image" class="Li" src="img/wawa.jpg" onclick="description3(dname)">
+            <h3 id="myDescription3"></h3>
+          </div>
+          <div class="div4" >
+            <input type="image" class="John" src="img/whatsea.jpg" onclick="description4(ename)">
+            <h3 id="myDescription4"></h3>
+          </div>
+          <div class="div5">
+            <input type="image" class="Alisa" src="img/srsmstge.jpg" onclick="description5(gname)">
+            <h3 id="myDescription5"></h3>
+          </div>
+          <div class="div6">
+            <input type="image" class="Daniel" src="img/rkrk.jpg" onclick="description6(hname)">
+            <h3 id="myDescription6"></h3>
+          </div>
+          <div class="div7">
+            <input type="image" class="Karen" src="img/dumdidum.jpg" onclick="description7(vname)">
+            <h3 id="myDescription7"></h3>
+          </div>
+          <div class="div8">
+            <input type="image" class="Engi" src="img/531428_1_m.png" onclick="description8(aname)">
+            <h3 id="myDescription8"></h3>
+          </div>
+          <div class="div9">
+            <input type="image" class="Jackie" src="img/bububu.png" onclick="description9(tname)">
+            <h3 id="myDescription9"></h3>
+          </div>
+          <div class="div10">
+            <input type="image" class="George" src="img/1_GHZZDGM8cONf_kRD3TuQlQ.png" onclick="description10(qname)">
+            <h3 id="myDescription10"></h3>
+          </div>
+
+        </div>
+
+		</section>
+			<section>
+			<nav class="nav100">
+				<div class="div111">
+				<!--closing "x" & menue icon navagation bar on small devices-->
+					<ul class="ul11">
+						<li class="li11"><a href="" class="a11">HOME</a></li>
+						<li class="li11"><a href="" class="a11">APPLY</a></li>
+						<li class="li11"><a href="" class="a11">GALLERY</a></li>
+						<li class="li11"><a href="" class="a11">GAME</a></li>
+						<li class="li11"><a href="" class="a11">CONTACT US</a></li>
+					</ul>
+				</div>
+
+			</nav>
+			<p class="p11">Copyright©|Made by Group 13</p>
+		</section>
+
+		<!--Javascript, allowing icons to hide/show small devices-->
+		<script>
+			var navigationIcon = document.getElementById("navigationIcon")
+			function visibleMenue(){
+				navigationIcon.style.right = "0";
+				}
+			function hiddenMenue(){
+				navigationIcon.style.right = "-205px";
+			}
+		</script>
+
+	</body>
+
+</html>

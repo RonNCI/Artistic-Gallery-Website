@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Artistic Gallery</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="style.css">
+		<script src="external.js"></script>
+		<!--connect the fonts-->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;500;700&display=swap" rel="stylesheet">
+		<!--connect the icon-->
+		<script src="https://kit.fontawesome.com/a9f8161db4.js" crossorigin="anonymous"></script>
+	</head>
+
+	<body>
+	<!--logo & navagation bar-->
+		<section class="header-section">
+			<nav>
+				<a href="index.html"><img src="img/logo.png" class="logo" alt="logo-with-transparent"></a>
+				<div class="navagation" id="navigationIcon">
+				<!--closing "x" & menue icon navagation bar on small devices-->
+					<i class="fa fa-times" onclick="hiddenMenue()"></i>
+					<ul>
+						<li><a href="index.html">HOME</a></li>
+						<li><a href="index2.html">APPLY</a></li>
+						<li><a href="index3.html">GALLERY</a></li>
+						<li><a href="index4.html">GAME</a></li>
+						<li><a href="index5.html">CONTACT US</a></li>
+					</ul>
+				</div>
+				<i class="fa fa-bars" onclick="visibleMenue()"></i>
+			</nav>
+
+		<!--About-Us-Box-->
+			<div class="About-Us-Box">
+				<h1>The Ultimate Secret Of ART</h1>
+				<p>The Aritistic Gallery offers a free online gallery adventure,<br>Check out the latest Art discovery  </p>
+				<a href="index3.html"class="button-btn">Visit Our Gallery</a>
+			</div>
+		</section>
+
+
+		<!--The Online Community Gallery Description-->
+		<section class="main-body">
+			<h1>Online Community Gallery</h1>
+			<p>Here Is What You Should Know About Us:</p>
+
+			<div class="row">
+				<div class="onlinecommunity-col">
+					<h3>What does Artistic Gallery do?</h3>
+					<p>Artistic Gallery is a community which allows users to express their stories of images. We give users opportunities to show the world their abilities of art. We also have a gallery game test to test your knowledge of what you have learned.</p>
+			    </div>
+				<div class="onlinecommunity-col">
+					<h3>Features of Joining Artistic Gallery!</h3>
+					<p>Artistic Gallery will place your artwork in the online gallery
+					which could lead art commercial enterprise workers to buy your
+					artwork and will allow others to recognize your ability in the art
+					industry.</p>
+				</div>
+				<div class="onlinecommunity-col">
+					<h3>How to get involved?</h3>
+					<p>You will have to Visit the Apply page and enter the information below. You can also email us at <a class="" href="mailto:artisticgallery@gmail.com"><strong>artisticgallery@gmail.com</strong></a>, remember to include your name and your age. You'll need to confirm for the images to be used as part of an online gallery.</p>
+			    </div>
+			</div>
+		</section>
+
+
+		<!--option-->
+		<section class="option">
+			<div class="text">
+				<h1>Our Latest Features</h1>
+				<p>Check The New Changes Below:</p>
+			</div>
+			<br>
+
+			<div class="option-section">
+				<div class="section">
+					<img src="img/option.png">
+					<a href=""><div class="overlayonbackground"></div></a>
+					<div class="option-section-description">
+							<h3>Gallery Section</h3>
+							<hr>
+							<p class="paragraph2">Top 10 Galleries This Month!</p>
+					</div>
+				</div>
+
+				<div class="section">
+					<img src="img/option2.png">
+					<a href=""><div class="overlayonbackground"></div></a>
+					<div class="option-section-description">
+							<h3>Game Section</h3>
+							<hr>
+							<p class="paragraph2">Test Your knowledege? </p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!--action to apply page-->
+		<!--CONNECTED THE APPLY NOW BUTTON TO CLASS FROM THE TOP BEGINNING-->
+		<section class="action-to-apply-page">
+			<h1>Join Thousands Of Other Artist Waiting For You<br>To Apply For Artistic Gallery</h1>
+			<a href="index2.html" class="button-btn">APPLY NOW</a>
+		</section>
+
+		<!--this is the footer-->
+		<section>
+			<nav class="nav10">
+				<div class="div11">
+				<!--closing "x" & menue icon navagation bar on small devices-->
+					<ul class="ul1">
+						<li class="li1"><a href="" class="a1">HOME</a></li>
+						<li class="li1"><a href="" class="a1">APPLY</a></li>
+						<li class="li1"><a href="" class="a1">GALLERY</a></li>
+						<li class="li1"><a href="" class="a1">GAME</a></li>
+						<li class="li1"><a href="" class="a1">CONTACT US</a></li>
+					</ul>
+				</div>
+
+			</nav>
+			<p class="p1">Copyright©|Made by Group 13</p>
+		</section>
+		<section>
+			<img id="opa" src="img/hiddenimage.jpg">
+			 <script>
+            document.getElementById("opa").style.display = "none";
+            </script>
+
+		</section>
+		<!--Javascript, allowing icons to hide/show small devices-->
+		<!---->
+		<script>
+			var navigationIcon = document.getElementById("navigationIcon")
+			function visibleMenue(){
+				navigationIcon.style.right = "0";
+				}
+			function hiddenMenue(){
+				navigationIcon.style.right = "-205px";
+			}
+		</script>
+
+
+
+	</body>
+
+</html>

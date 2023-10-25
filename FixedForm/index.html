@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Validation</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="userApplicaton">
+    
+
+    <form class="application" name="contact-form">
+      <div class="form-control">
+        <label class="batman">Full Name</label>
+        <input class="userDetails" name="name"  />
+        <div class="error3 hide3">Name is required</div>
+      </div>
+
+      <div class="form-control">
+        <label class="batman">Email</label>
+        <input class="userDetails"
+          name="email"
+          placeholder="e.g. your_email@example.com"
+        />
+        <div class="error3 hide3">Email is invalid</div>
+      </div>
+
+      <div class="form-control">
+        <label class="batman">Message</label>
+        <textarea class="userQuestion"name="message"></textarea>
+        <div class="error3 hide3">Message is required</div>
+      </div>
+
+      
+
+      <button class="formSubm" type="submit">Submit and Apply</button>
+    </form>
+
+    <script src="form.js"></script>
+  </body>
+</html>

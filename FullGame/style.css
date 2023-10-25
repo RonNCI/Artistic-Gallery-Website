@@ -1,0 +1,1357 @@
+/*This is the main page*/
+/*--targets all css--*/
+*{
+	font-family: 'Roboto Slab', serif;
+	margin: 0;
+	padding: 0;
+}
+/*--background image & DARKEN the image--*/
+.header-section{
+	background-image: linear-gradient(rgba(3, 8, 29, 0.7), rgba(3, 8, 29, 0.7)), url('img/background.jpg');   /*https://www.w3schools.com/css/tryit.asp?filename=trycss3_gradient-linear_trans*/
+	background-size: cover;
+	background-position: center;
+	width: 100%;
+	height:752px;
+	min-height: 752px;
+}
+
+/*-- focus on the header, logo, and icons--*/
+nav{
+	display: flex;
+	justify-content: space-between; /*https://www.w3schools.com/cssref/tryit.asp?filename=trycss3_justify-content2*/
+	/*changed px to %*/
+	padding-top: 1.3%;
+	padding-bottom: 1.3%;
+	padding-left: 5%;
+	padding-right: 5%;
+	align-items: center;
+	position: auto;
+}
+
+/*--image--*/
+nav img{
+	width: 45%;
+}
+/*--the header, logo, and icons--*/
+.navagation{
+	flex: 1;  /*expansion*//*https://www.w3schools.com/cssref/tryit.asp?filename=trycss3_flex*/
+	text-align: right;
+}
+
+.navagation ul li{
+	display: inline-block; /*https://www.w3schools.com/cssref/tryit.asp?filename=trycss_display*/
+	padding-top: 8px;
+	padding-bottom: 8px;
+	padding-left: 12px;
+	padding-right: 12px;
+	position: relative;
+}
+
+.navagation ul li a{
+	color: white;
+	text-decoration: none; /*get rids of the lines under navagation*/
+	font-size: 13.5px;
+
+}
+/*--this is the hover effect on navagation bar--*/
+.navagation ul li::after{ /*This is the after procedure*//*https://www.w3schools.com/cssref/tryit.asp?filename=trycss_sel_after*/
+	content:''; /*this position hides the content unless place into ''*//*https://www.w3schools.com/cssref/tryit.asp?filename=trycss_content*/
+	height: 1.8px;
+	width: 0%;
+	background-color: #3ebcfb;
+	display: block;
+	transition: 0.5s; /*timer*//*https://www.w3schools.com/css/tryit.asp?filename=trycss3_transition_delay*/
+}
+
+.navagation ul li:hover::after{  /*combined the hover and after together to create the animation of navagation*/ /*https://www.w3schools.com/cssref/tryit.asp?filename=trycss_sel_hover_more*/
+	width: 100%;
+}
+
+.About-Us-Box{
+	width: 100%;
+	position: absolute;
+	color: white;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%); /*About-Us-Box position in center*//*https://www.w3schools.com/css/tryit.asp?filename=trycss3_transform_translate*/
+	text-align: center;
+}
+
+.About-Us-Box h1{
+	font-size: 62px;
+}
+
+.About-Us-Box p{
+	margin-top: 10px;
+	margin-right: 0;
+	margin-left: 0;
+	margin-bottom: 40px;
+	font-size: 14.5px;
+	color: white;
+}
+
+/*--this is the hover effect on the button--*/
+.button-btn{
+	display: inline-block;
+	text-decoration: none;
+	color: white;
+	border-width: 1px;
+	border-style: solid;
+	border-color: white;
+	padding: 15px 37px;
+	font-size: 14px;
+	position: relative;
+	cursor: pointer; /*allows mouse to be pointer once click*/
+}
+
+.button-btn:hover{
+	border-width: 1px;
+	border-style: solid;
+	border-color: #3ebcfb;
+	background-color: #3ebcfb;
+	transition: 0.9s; /*timer of button*/
+}
+
+/*--hide the icon on big screens--*/
+nav .fa{
+	display: none;
+}
+
+
+@media(max-width: 865px){
+		.About-Us-Box h1{
+		font-size: 20px;
+		}
+		.navagation ul li{
+			display: block;
+		}
+		.navagation{
+			position: absolute;
+			background-color: #3ebcfb;
+			height: 590px;
+			top: 0;
+			right: 0;
+			width: 200px;
+			text-align: left; /*menue bar keep left on small devices*/
+			z-index: 1; /*how visible you would like the navagation -1 to 1*/ /*https://www.w3schools.com/cssref/tryit.asp?filename=trycss_zindex*/
+			transition: 1.1s;
+		}
+		nav .fa{
+			display: block;
+			color: white;
+			margin: 10px;
+			font-size: 22px;
+			cursor: pointer;
+		}
+		.navagation ul{
+			padding: 30px;
+		}
+		.header-section{
+			height: 590px;
+			min-height: 590px
+		}
+
+}
+
+/*-this is the online community gallary*/
+.main-body{
+	width: 85%;
+	margin: auto;
+	padding-top: 100px;
+	text-align: center;
+
+}
+
+h1{
+	font-size: 37px;
+	font-weight: 600;
+
+}
+
+
+p{
+	color: #5f5f5f;
+	line-height: 22.5px;
+	font-weight: 300; /*thickness of p*/
+	font-size: 14.5px;
+	padding: 8px;
+}
+
+.row{
+	justify-content: space-between;
+	display: flex;
+	margin:5%;
+
+}
+/*background color for columns*/
+.onlinecommunity-col{
+	background: #aacff9;
+	flex-basis: 32%;
+	margin-bottom: 5%;
+	margin-top: 0%;
+	border-radius: 10px; /*curve on boxes*/
+	padding: 20px 12px;
+	box-sizing: border-box;
+	transition: 0.4s;
+}
+h3{
+	margin-top: 10px;
+	margin-right: 0;
+	margin-left: 0;
+	margin-bottom: 10px;
+	font-weight: 600; /*thickness of font*/
+	text-align: center;
+}
+/*creating a shadow box background*/
+.onlinecommunity-col:hover{
+	box-shadow: 0px 0px 17px 0px rgba(0, 0, 0, 1); /*https://www.w3schools.com/cssref/tryit.asp?filename=trycss3_box-shadow2*/
+}
+
+/*box fixed at small divve level*/
+@media(max-width:865px){
+	.row{
+		flex-direction: column; /*turns into columns*/
+	}
+}
+
+
+
+/*--------option------- */
+.option{
+	width: 100%;
+	background: #efefef;
+	padding: 69px 0;
+	margin: auto;
+	text-align: center;
+}
+
+.option-section{
+	width: 80%;
+	margin: auto;
+	flex-wrap: wrap; /*create a wrap*//*https://www.w3schools.com/cssref/tryit.asp?filename=trycss3_flex-wrap*/
+	display: flex;
+	justify-content: space-around; /*creating a space in between*/
+
+}
+
+.section{
+	color: white;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	flex-basis: 48%;
+	text-align: center;
+	border-radius: 7px;
+	position: relative;
+}
+.section img{
+	width: 100%;
+	border-radius: 7px;
+}
+
+.overlayonbackground{
+	width: 100%;
+	height: 100%;
+	top: 0;
+	border-radius: 7px;
+	position: absolute;
+	cursor: pointer;
+	background: linear-gradient(rgba(0, 0, 0, 0.7), #aacff9);
+	opacity: 0; /*fading level to 0*//*https://www.w3schools.com/cssref/tryit.asp?filename=trycss3_opacity*/
+	transition: 1s;
+
+}
+
+.section:hover .overlayonbackground{
+	opacity: 1; /*fading level increase to 1 when hover*/
+}
+
+.option-section-description{
+	transform: translateX(-50%); /*About-Us-Box position in center*//*https://www.w3schools.com/css/tryit.asp?filename=trycss3_transform_translate*/
+	left: 50%;
+	width: 80%;
+	position: absolute;
+	bottom: 0%;
+	opacity: 0;
+	transition: 1.1s;
+}
+
+hr{						/*border not required*/
+	background: white;
+	margin: 0px auto; /*https://www.w3schools.com/css/tryit.asp?filename=trycss_margin_shorthand_2val*/
+	height: 1px;
+	width:60%;
+}
+
+.option-section-description{
+	font-size: 15px;
+
+}
+.paragraph2{
+	font-size: 14px;
+	color: white;
+}
+
+.section:hover .option-section-description{
+	bottom: 41%;
+	opacity: 1;
+}
+
+@media(max-width:865px){
+	.section{
+		flex-basis: 100%; /*explained above-expansion*/
+		margin-bottom: 30px;
+		margin-top: 30px;
+}
+	.paragraph2{
+	font-size: 13px;
+	color: white;
+}
+	.option-section-description{
+	font-size: 14px;
+
+}
+	hr{
+		margin: 5px auto;
+	}
+	.section:hover .option-section-description{
+	bottom: 35%;
+
+}
+}
+/*logo size*/
+.logo{
+	height: 30%;
+	width:60%;
+	padding-top: 0%;
+
+}
+
+/*action-to-apply-page*/
+
+.action-to-apply-page{
+	margin: 100px auto;
+	background-image: linear-gradient(rgba(5, 13, 50, 1), rgba(37, 40, 100, 0.7)), url('img/background4.jpg');
+	width: 80%;
+	background-position: center;
+	background-size: cover;
+	padding:100px 0;
+	text-align: center;
+	border-radius: 10px;
+	color: white;
+
+
+}
+.action-to-apply-page h1{
+	color: white;
+	margin-bottom: 40px;
+	margin-top: 40px;
+
+}
+
+
+@media(max-width:865px){
+	.action-to-apply-page h1{
+		font-size: 25px;
+
+	}
+}
+
+/*this is the footer*/
+.div11, .ul1, .li1{
+	justify-content: space-between;
+	text-decoration: none;
+	display: inline-block; /*https://www.w3schools.com/cssref/tryit.asp?filename=trycss_display*/
+	padding-top: 8px;
+	padding-bottom: 8px;
+	padding-left: 12px;
+	padding-right: 12px;
+	position: relative;
+
+}
+
+.ul1, .li1, .a1{
+	color: black;
+	text-decoration: none;
+}
+
+
+.nav10{
+	width: 100%;
+	position: absolute;
+	color: white;
+	top: 370%;
+	left: 83.5%;
+	transform: translate(-50%,-50%); /*About-Us-Box position in center*//*https://www.w3schools.com/css/tryit.asp?filename=trycss3_transform_translate*/
+	text-align: center;
+
+}
+
+.p1{
+	width: 100%;
+	position: absolute;
+	top: 373.5%;
+	left: 50%;
+	transform: translate(-50%,-50%); /*About-Us-Box position in center*//*https://www.w3schools.com/css/tryit.asp?filename=trycss3_transform_translate*/
+	text-align: center;
+
+}
+@media(max-width:865px){
+	.div11, .ul1, .li1{
+	display: none;
+
+}
+
+.ul1, .li1, .a1{
+	display: none;
+}
+
+
+.nav10{
+	display: none;
+
+}
+
+.p1{
+	display: none;
+}
+
+}
+
+/*this is the end of main page*/
+/*this is the apply page*/
+
+
+
+
+
+
+
+
+
+/*--background image & DARKEN the image--*/
+.header-section2{
+	background-image: linear-gradient(rgba(3, 8, 29, 0.7), rgba(3, 8, 29, 0.7)), url('img/bk2.jpg');   /*https://www.w3schools.com/css/tryit.asp?filename=trycss3_gradient-linear_trans*/
+	background-size: cover;
+	background-position: center;
+	width: 100%;
+	height:460px;
+	min-height: 460px;
+}
+
+/*-- focus on the header, logo, and icons--*/
+nav{
+	display: flex;
+	justify-content: space-between; /*https://www.w3schools.com/cssref/tryit.asp?filename=trycss3_justify-content2*/
+	/*changed px to %*/
+	padding-top: 1.3%;
+	padding-bottom: 1.3%;
+	padding-left: 5%;
+	padding-right: 5%;
+	align-items: center;
+	position: auto;
+}
+
+/*--image--*/
+nav img{
+	width: 45%;
+}
+/*--the header, logo, and icons--*/
+.navagation2{
+	flex: 1;  /*expansion*//*https://www.w3schools.com/cssref/tryit.asp?filename=trycss3_flex*/
+	text-align: right;
+}
+
+.navagation2 ul li{
+	display: inline-block; /*https://www.w3schools.com/cssref/tryit.asp?filename=trycss_display*/
+	padding-top: 8px;
+	padding-bottom: 8px;
+	padding-left: 12px;
+	padding-right: 12px;
+	position: relative;
+}
+
+.navagation2 ul li a{
+	color: white;
+	text-decoration: none; /*get rids of the lines under navagation*/
+	font-size: 13.5px;
+
+}
+/*--this is the hover effect on navagation bar--*/
+.navagation2 ul li::after{ /*This is the after procedure*//*https://www.w3schools.com/cssref/tryit.asp?filename=trycss_sel_after*/
+	content:''; /*this position hides the content unless place into ''*//*https://www.w3schools.com/cssref/tryit.asp?filename=trycss_content*/
+	height: 1.8px;
+	width: 0%;
+	background-color: #3ebcfb;
+	display: block;
+	transition: 0.5s; /*timer*//*https://www.w3schools.com/css/tryit.asp?filename=trycss3_transition_delay*/
+}
+
+.navagation2 ul li:hover::after{  /*combined the hover and after together to create the animation of navagation*/ /*https://www.w3schools.com/cssref/tryit.asp?filename=trycss_sel_hover_more*/
+	width: 100%;
+}
+
+.About-Us-Box2{
+	width: 100%;
+	position: absolute;
+	color: white;
+	top: 35%;
+	left: 50%;
+	transform: translate(-50%,-50%); /*About-Us-Box position in center*//*https://www.w3schools.com/css/tryit.asp?filename=trycss3_transform_translate*/
+	text-align: center;
+}
+
+.About-Us-Box2 h1{
+	font-size: 62px;
+}
+
+.About-Us-Box2 p{
+	margin-top: 10px;
+	margin-right: 0;
+	margin-left: 0;
+	margin-bottom: 40px;
+	font-size: 14.5px;
+	color: white;
+}
+
+/*--hide the icon on big screens--*/
+nav .fa{
+	display: none;
+}
+
+
+@media(max-width: 865px){
+		.About-Us-Box2 h1{
+		font-size: 20px;
+		}
+		.navagation2 ul li{
+			display: block;
+		}
+		.navagation2{
+			position: absolute;
+			background-color: #3ebcfb;
+			height: 460px;
+			top: 0;
+			right: 0;
+			width: 200px;
+			text-align: left; /*menue bar keep left on small devices*/
+			z-index: 1; /*how visible you would like the navagation -1 to 1*/ /*https://www.w3schools.com/cssref/tryit.asp?filename=trycss_zindex*/
+			transition: 1.1s;
+		}
+		nav .fa{
+			display: block;
+			color: white;
+			margin: 10px;
+			font-size: 22px;
+			cursor: pointer;
+		}
+		.navagation2 ul{
+			padding: 30px;
+		}
+		.header-section2{
+			height: 460px;
+			min-height: 460px
+		}
+
+}
+
+/*logo size*/
+.logo2{
+	height: 30%;
+	width:60%;
+	padding-top: 0%;
+
+}
+
+
+
+
+
+
+
+
+
+/*This is the end of the apply page*/
+/*this is the gallery section*/
+
+
+
+
+/*--background image & DARKEN the image--*/
+.header-section3{
+	background-image: linear-gradient(rgba(3, 8, 29, 0.7), rgba(3, 8, 29, 0.7)), url('img/bk6.jpg');   /*https://www.w3schools.com/css/tryit.asp?filename=trycss3_gradient-linear_trans*/
+	background-size: cover;
+	background-position: center;
+	width: 100%;
+	height:460px;
+	min-height: 460px;
+}
+
+/*-- focus on the header, logo, and icons--*/
+nav{
+	display: flex;
+	justify-content: space-between; /*https://www.w3schools.com/cssref/tryit.asp?filename=trycss3_justify-content2*/
+	/*changed px to %*/
+	padding-top: 1.3%;
+	padding-bottom: 1.3%;
+	padding-left: 5%;
+	padding-right: 5%;
+	align-items: center;
+	position: auto;
+}
+
+/*--image--*/
+nav img{
+	width: 45%;
+}
+/*--the header, logo, and icons--*/
+.navagation3{
+	flex: 1;  /*expansion*//*https://www.w3schools.com/cssref/tryit.asp?filename=trycss3_flex*/
+	text-align: right;
+}
+
+.navagation3 ul li{
+	display: inline-block; /*https://www.w3schools.com/cssref/tryit.asp?filename=trycss_display*/
+	padding-top: 8px;
+	padding-bottom: 8px;
+	padding-left: 12px;
+	padding-right: 12px;
+	position: relative;
+}
+
+.navagation3 ul li a{
+	color: white;
+	text-decoration: none; /*get rids of the lines under navagation*/
+	font-size: 13.5px;
+
+}
+/*--this is the hover effect on navagation bar--*/
+.navagation3 ul li::after{ /*This is the after procedure*//*https://www.w3schools.com/cssref/tryit.asp?filename=trycss_sel_after*/
+	content:''; /*this position hides the content unless place into ''*//*https://www.w3schools.com/cssref/tryit.asp?filename=trycss_content*/
+	height: 1.8px;
+	width: 0%;
+	background-color: #3ebcfb;
+	display: block;
+	transition: 0.5s; /*timer*//*https://www.w3schools.com/css/tryit.asp?filename=trycss3_transition_delay*/
+}
+
+.navagation3 ul li:hover::after{  /*combined the hover and after together to create the animation of navagation*/ /*https://www.w3schools.com/cssref/tryit.asp?filename=trycss_sel_hover_more*/
+	width: 100%;
+}
+
+.About-Us-Box3{
+	width: 100%;
+	position: absolute;
+	color: white;
+	top: 35%;
+	left: 50%;
+	transform: translate(-50%,-50%); /*About-Us-Box position in center*//*https://www.w3schools.com/css/tryit.asp?filename=trycss3_transform_translate*/
+	text-align: center;
+}
+
+.About-Us-Box3 h1{
+	font-size: 62px;
+}
+
+.About-Us-Box3 p{
+	margin-top: 10px;
+	margin-right: 0;
+	margin-left: 0;
+	margin-bottom: 40px;
+	font-size: 14.5px;
+	color: white;
+}
+
+/*--hide the icon on big screens--*/
+nav .fa{
+	display: none;
+}
+
+
+@media(max-width: 865px){
+		.About-Us-Box3 h1{
+		font-size: 20px;
+		}
+		.navagation3 ul li{
+			display: block;
+		}
+		.navagation3{
+			position: absolute;
+			background-color: #3ebcfb;
+			height: 460px;
+			top: 0;
+			right: 0;
+			width: 200px;
+			text-align: left; /*menue bar keep left on small devices*/
+			z-index: 1; /*how visible you would like the navagation -1 to 1*/ /*https://www.w3schools.com/cssref/tryit.asp?filename=trycss_zindex*/
+			transition: 1.1s;
+		}
+		nav .fa{
+			display: block;
+			color: white;
+			margin: 10px;
+			font-size: 22px;
+			cursor: pointer;
+		}
+		.navagation3 ul{
+			padding: 30px;
+		}
+		.header-section3{
+			height: 460px;
+			min-height: 460px
+		}
+
+}
+
+/*logo size*/
+.logo3{
+	height: 30%;
+	width:60%;
+	padding-top: 0%;
+
+}
+/*this is the body*/
+.divContainer{
+  padding: 100px auto;
+  margin: 0px auto;
+  color: black;
+  text-align: center;
+}
+.gamediv10001, .gamediv10002, .gamediv10003, .gamediv10004, .gamediv10005, .gamediv10006{
+  margin: 10px;
+  padding: 10px;
+  width: 300px;
+  border-radius: 15px;
+  display: inline-block;
+	box-shadow: 5px 5px 5px;
+}
+
+.Begin{
+	text-align: center;
+}
+.IntroComGalery{
+	text-align: center;
+}
+/*this is the footer*/
+.div111, .ul11, .li11{
+	justify-content: space-between;
+	text-decoration: none;
+	display: inline-block; /*https://www.w3schools.com/cssref/tryit.asp?filename=trycss_display*/
+	padding-top: 8px;
+	padding-bottom: 8px;
+	padding-left: 12px;
+	padding-right: 12px;
+	position: relative;
+
+}
+
+.ul11, .li11, .a11{
+	color: black;
+	text-decoration: none;
+}
+
+
+.nav100{
+	width: 100%;
+	position: absolute;
+	color: white;
+	top: 190%;
+	left: 83.5%;
+	transform: translate(-50%,-50%); /*About-Us-Box position in center*//*https://www.w3schools.com/css/tryit.asp?filename=trycss3_transform_translate*/
+	text-align: center;
+
+}
+
+.p11{
+	width: 100%;
+	position: absolute;
+	top: 193.5%;
+	left: 50%;
+	transform: translate(-50%,-50%); /*About-Us-Box position in center*//*https://www.w3schools.com/css/tryit.asp?filename=trycss3_transform_translate*/
+	text-align: center;
+
+}
+@media(max-width:865px){
+	.div111, .ul11, .li11{
+	display: none;
+
+}
+
+.ul11, .li11, .a11{
+	display: none;
+}
+
+
+.nav100{
+	display: none;
+
+}
+
+.p11{
+	display: none;
+}
+
+}
+
+/*this is the end of main page*/
+/*this is the apply page*/
+
+
+/*This is the end of gallery page*/
+/*This is the game section*/
+
+
+
+
+/*--background image & DARKEN the image--*/
+.header-section4{
+	background-image: linear-gradient(rgba(3, 8, 29, 0.7), rgba(3, 8, 29, 0.7)), url('img/bk7.jfif');   /*https://www.w3schools.com/css/tryit.asp?filename=trycss3_gradient-linear_trans*/
+	background-size: cover;
+	background-position: center;
+	width: 100%;
+	height:460px;
+	min-height: 460px;
+}
+
+/*-- focus on the header, logo, and icons--*/
+nav{
+	display: flex;
+	justify-content: space-between; /*https://www.w3schools.com/cssref/tryit.asp?filename=trycss3_justify-content2*/
+	/*changed px to %*/
+	padding-top: 1.3%;
+	padding-bottom: 1.3%;
+	padding-left: 5%;
+	padding-right: 5%;
+	align-items: center;
+	position: auto;
+}
+
+/*--image--*/
+nav img{
+	width: 45%;
+}
+/*--the header, logo, and icons--*/
+.navagation4{
+	flex: 1;  /*expansion*//*https://www.w3schools.com/cssref/tryit.asp?filename=trycss3_flex*/
+	text-align: right;
+}
+
+.navagation4 ul li{
+	display: inline-block; /*https://www.w3schools.com/cssref/tryit.asp?filename=trycss_display*/
+	padding-top: 8px;
+	padding-bottom: 8px;
+	padding-left: 12px;
+	padding-right: 12px;
+	position: relative;
+}
+
+.navagation4 ul li a{
+	color: white;
+	text-decoration: none; /*get rids of the lines under navagation*/
+	font-size: 13.5px;
+
+}
+/*--this is the hover effect on navagation bar--*/
+.navagation4 ul li::after{ /*This is the after procedure*//*https://www.w3schools.com/cssref/tryit.asp?filename=trycss_sel_after*/
+	content:''; /*this position hides the content unless place into ''*//*https://www.w3schools.com/cssref/tryit.asp?filename=trycss_content*/
+	height: 1.8px;
+	width: 0%;
+	background-color: #3ebcfb;
+	display: block;
+	transition: 0.5s; /*timer*//*https://www.w3schools.com/css/tryit.asp?filename=trycss3_transition_delay*/
+}
+
+.navagation4 ul li:hover::after{  /*combined the hover and after together to create the animation of navagation*/ /*https://www.w3schools.com/cssref/tryit.asp?filename=trycss_sel_hover_more*/
+	width: 100%;
+}
+
+.About-Us-Box4{
+	width: 100%;
+	position: absolute;
+	color: white;
+	top: 35%;
+	left: 50%;
+	transform: translate(-50%,-50%); /*About-Us-Box position in center*//*https://www.w3schools.com/css/tryit.asp?filename=trycss3_transform_translate*/
+	text-align: center;
+}
+
+.About-Us-Box4 h1{
+	font-size: 62px;
+}
+
+.About-Us-Box4 p{
+	margin-top: 10px;
+	margin-right: 0;
+	margin-left: 0;
+	margin-bottom: 40px;
+	font-size: 14.5px;
+	color: white;
+}
+
+/*--hide the icon on big screens--*/
+nav .fa{
+	display: none;
+}
+
+
+@media(max-width: 865px){
+		.About-Us-Box4 h1{
+		font-size: 20px;
+		}
+		.navagation4 ul li{
+			display: block;
+		}
+		.navagation4{
+			position: absolute;
+			background-color: #3ebcfb;
+			height: 460px;
+			top: 0;
+			right: 0;
+			width: 200px;
+			text-align: left; /*menue bar keep left on small devices*/
+			z-index: 1; /*how visible you would like the navagation -1 to 1*/ /*https://www.w3schools.com/cssref/tryit.asp?filename=trycss_zindex*/
+			transition: 1.1s;
+		}
+		nav .fa{
+			display: block;
+			color: white;
+			margin: 10px;
+			font-size: 22px;
+			cursor: pointer;
+		}
+		.navagation4 ul{
+			padding: 30px;
+		}
+		.header-section4{
+			height: 460px;
+			min-height: 460px
+		}
+
+}
+
+/*logo size*/
+.logo4{
+	height: 30%;
+	width:60%;
+	padding-top: 0%;
+
+}
+
+/* Start of Game CSS */
+.gameBody{
+  background-color:
+  margin:0;
+}
+.header{
+  color:white;
+  padding: 10px;
+}
+.gameh2, .gameParagraph, .gameh1{
+  text-align: center;
+}
+.gameDiv1{
+  padding: 100px auto;
+  margin: 0px auto;
+  text-align: center;
+}
+*{
+	  box-sizing: border-box;
+	  margin: 0;
+	  padding: 0;
+	  outline: none;
+}
+}
+.div1, .div2, .div3, .div4, .div5, .div6{
+  margin: 10px;
+  padding: 10px;
+  width: 300px;
+  border-radius: 15px;
+  display: inline-block;
+  border: 5px black;
+  border-style: hidden;
+  box-shadow: 2px 5px 2px 5px;
+}
+.gameDiv1 .imageOptimizations{
+  width: 100%;
+}
+.buttonDiv{
+  text-align: center;
+  margin: 10px 0;
+}
+.buttonDiv .gameboxbttn{
+  font-size: 30px;
+}
+.gameboxcustom{
+  max-width: 700px;
+  background-color: #ffffff;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 15px;
+  display:none;
+  border: 1px solid;
+  box-shadow: 5px 5px;
+}
+.gameboxbttn{
+  padding: 10px 30px;
+  background-color: green;
+  color: #ffffff;
+  cursor: pointer;
+  margin-top: 10px;
+  border: 0;
+  border-radius: 10px;
+  font-size: 20px;
+}
+.gameDiv2 .gameName001{
+  font-size: 20px;
+  font-weight: bold;
+  border-bottom: 1px solid;
+  line-height: 30px;
+}
+.gameDiv2 .gameTopic{
+  font-size: 40px;
+  padding: 10px 0;
+  margin-bottom: 5px;
+}
+.gameDiv2{
+  padding: 10px;
+  font-size: 24px;
+  line-height: 30px;
+  margin-bottom: 10px;
+}
+.gameDiv2 .nextbttn .gameboxbttn{
+  margin-top: 13px;
+}
+.gameTopic{
+  margin: 10px 0;
+}
+.gameTopic .resultmsg{
+  text-align: center;
+  font-weight: lighter;
+  background-color: brown;
+  font-size: 40px;
+}
+.txtField{
+  font-size: 50px;
+  text-align: center;
+  border-radius: 10px;
+  border: 1px solid;
+}
+.userGuessResults .gameTable{
+  width: 100%;
+  border-collapse: separate;
+  margin: 30px 0;
+}
+.userGuessResults .gameTable .gameTd{
+  border: 1px solid black;
+  padding:8px 15px;
+  font-weight: 500;
+  color: black;
+}
+.userGuessResults .gameboxbttn{
+  margin-top: 0;
+}
+/*End of Game CSS*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*this is the end of the game section*/
+/*this is the contact us section*/
+
+
+/*--background image & DARKEN the image--*/
+.header-section5{
+	background-image: linear-gradient(rgba(3, 8, 29, 0.7), rgba(3, 8, 29, 0.7)), url('img/bk3.jfif');   /*https://www.w3schools.com/css/tryit.asp?filename=trycss3_gradient-linear_trans*/
+	background-size: cover;
+	background-position: center;
+	width: 100%;
+	height:460px;
+	min-height: 460px;
+}
+
+/*-- focus on the header, logo, and icons--*/
+nav{
+	display: flex;
+	justify-content: space-between; /*https://www.w3schools.com/cssref/tryit.asp?filename=trycss3_justify-content2*/
+	/*changed px to %*/
+	padding-top: 1.3%;
+	padding-bottom: 1.3%;
+	padding-left: 5%;
+	padding-right: 5%;
+	align-items: center;
+	position: auto;
+}
+
+/*--image--*/
+nav img{
+	width: 45%;
+}
+/*--the header, logo, and icons--*/
+.navagation5{
+	flex: 1;  /*expansion*//*https://www.w3schools.com/cssref/tryit.asp?filename=trycss3_flex*/
+	text-align: right;
+}
+
+.navagation5 ul li{
+	display: inline-block; /*https://www.w3schools.com/cssref/tryit.asp?filename=trycss_display*/
+	padding-top: 8px;
+	padding-bottom: 8px;
+	padding-left: 12px;
+	padding-right: 12px;
+	position: relative;
+}
+
+.navagation5 ul li a{
+	color: white;
+	text-decoration: none; /*get rids of the lines under navagation*/
+	font-size: 13.5px;
+
+}
+/*--this is the hover effect on navagation bar--*/
+.navagation5 ul li::after{ /*This is the after procedure*//*https://www.w3schools.com/cssref/tryit.asp?filename=trycss_sel_after*/
+	content:''; /*this position hides the content unless place into ''*//*https://www.w3schools.com/cssref/tryit.asp?filename=trycss_content*/
+	height: 1.8px;
+	width: 0%;
+	background-color: #3ebcfb;
+	display: block;
+	transition: 0.5s; /*timer*//*https://www.w3schools.com/css/tryit.asp?filename=trycss3_transition_delay*/
+}
+
+.navagation5 ul li:hover::after{  /*combined the hover and after together to create the animation of navagation*/ /*https://www.w3schools.com/cssref/tryit.asp?filename=trycss_sel_hover_more*/
+	width: 100%;
+}
+
+.About-Us-Box5{
+	width: 100%;
+	position: absolute;
+	color: white;
+	top: 35%;
+	left: 50%;
+	transform: translate(-50%,-50%); /*About-Us-Box position in center*//*https://www.w3schools.com/css/tryit.asp?filename=trycss3_transform_translate*/
+	text-align: center;
+}
+
+.About-Us-Box5 h1{
+	font-size: 62px;
+}
+
+.About-Us-Box5 p{
+	margin-top: 10px;
+	margin-right: 0;
+	margin-left: 0;
+	margin-bottom: 40px;
+	font-size: 14.5px;
+	color: white;
+}
+
+/*--hide the icon on big screens--*/
+nav .fa{
+	display: none;
+}
+
+
+@media(max-width: 865px){
+		.About-Us-Box5 h1{
+		font-size: 20px;
+		}
+		.navagation5 ul li{
+			display: block;
+		}
+		.navagation5{
+			position: absolute;
+			background-color: #3ebcfb;
+			height: 460px;
+			top: 0;
+			right: 0;
+			width: 200px;
+			text-align: left; /*menue bar keep left on small devices*/
+			z-index: 1; /*how visible you would like the navagation -1 to 1*/ /*https://www.w3schools.com/cssref/tryit.asp?filename=trycss_zindex*/
+			transition: 1.1s;
+		}
+		nav .fa{
+			display: block;
+			color: white;
+			margin: 10px;
+			font-size: 22px;
+			cursor: pointer;
+		}
+		.navagation5 ul{
+			padding: 30px;
+		}
+		.header-section5{
+			height: 460px;
+			min-height: 460px
+		}
+
+}
+
+/*logo size*/
+.logo5{
+	height: 30%;
+	width:60%;
+	padding-top: 0%;
+
+}
+.oo11{
+	text-align: center;
+	color: black;
+	font-size: 200;
+}
+
+.map{
+	justify-content: space-between;
+	text-decoration: none;
+	display: inline-block; /*https://www.w3schools.com/cssref/tryit.asp?filename=trycss_display*/
+	padding-top: 8px;
+	padding-bottom: 8px;
+	padding-left: 12px;
+	padding-right: 12px;
+	position: relative;
+	left: 5%;
+}
+
+@media(max-width: 1290px){
+	.map{
+	display: none;
+	}
+	.oo11{
+	display: none;
+}
+}
+
+
+/*this is the body page*/
+.formofapplysection{
+	text-align: center;
+	    font-size: 10px;
+    margin-bottom: 10px;
+	  font-weight: 900;
+	    padding-right: 550px;
+  padding-left: 550px;
+  padding-bottom: 100px;
+}
+
+
+.label4{
+
+	font-size: 20px;
+    margin-bottom: 10px;
+	  font-weight: 900;
+	    padding-right: 70px;
+  padding-left: 70px;
+}
+.headerofapplysection, .headerparagraphappysection{
+	text-align: center;
+}
+
+.thisisthesectionforcontactus{
+	text-align: center;
+}
+
+
+@media(max-width: 1290px){
+	.thisisthesectionforcontactus{
+		display:none;
+	}
+	.headerofapplysection{
+		display:none;
+	}
+	.label4{
+		display:none;
+	}
+	.formofapplysection{
+		display:none;
+	}
+	.headerparagraphappysection{
+		display:none;
+	}
+	.responsiveparagraph{
+		text-align: center;
+		visibility: hidden;
+	}
+
+}
+
+
+.responsiveparagraph{
+	visibility: visible;
+	text-align: center;
+
+}
+
+/*this is the footer*/
+.div55, .u5, .li5{
+	justify-content: space-between;
+	text-decoration: none;
+	display: inline-block; /*https://www.w3schools.com/cssref/tryit.asp?filename=trycss_display*/
+	padding-top: 8px;
+	padding-bottom: 8px;
+	padding-left: 12px;
+	padding-right: 12px;
+	position: relative;
+
+}
+
+.ul5, .li5, .a5{
+	color: black;
+	text-decoration: none;
+}
+
+
+.nav55{
+	width: 100%;
+	position: absolute;
+	color: white;
+	top: 255%;
+	left: 80.5%;
+	transform: translate(-50%,-50%); /*About-Us-Box position in center*//*https://www.w3schools.com/css/tryit.asp?filename=trycss3_transform_translate*/
+	text-align: center;
+	font-size: 20px;
+
+}
+
+.p5{
+	width: 100%;
+	position: absolute;
+	top: 260.5%;
+	left: 50%;
+	transform: translate(-50%,-50%); /*About-Us-Box position in center*//*https://www.w3schools.com/css/tryit.asp?filename=trycss3_transform_translate*/
+	text-align: center;
+
+}
+@media(max-width:865px){
+	.div55, .ul5, .li5{
+	display: none;
+
+}
+
+.ul5, .li5, .a5{
+	display: none;
+}
+
+
+.nav55{
+	display: none;
+
+}
+
+.p5{
+	display: none;
+}
+
+}
